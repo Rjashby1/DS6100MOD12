@@ -52,7 +52,7 @@ table_fig = ff.create_table(summary_df)
 # Problem 4: Scatter Plot Figure
 scatter_data = gss_clean[['job_prestige', 'income', 'sex', 'education', 'socioeconomic_index']].dropna()
 scatter_fig = px.scatter(scatter_data, x='job_prestige', y='income', color='sex',
-                         trendline='ols', hover_data=['education', 'socioeconomic_index'],
+                         hover_data=['education', 'socioeconomic_index'],
                          labels={'job_prestige': 'Job Prestige Score', 'income': 'Annual Income', 'sex': 'Sex'})
 
 # Problem 5: Box Plot Figures
@@ -136,3 +136,4 @@ def update_graph(xaxis_col, color_col):
 
 # This is for the production server
 server = app_final.server
+
