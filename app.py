@@ -134,6 +134,6 @@ def update_graph(xaxis_col, color_col):
     fig.update_layout(transition_duration=500, plot_bgcolor='#222222', paper_bgcolor='#111111', font_color='#FFFFFF')
     return fig
 
-# This is for the production server
-server = app_final.server
-
+# --- Main entry point for local testing ---
+if __name__ == '__main__':
+    app.run_server(debug=True)
